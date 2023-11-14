@@ -7,15 +7,15 @@
     {
         Armor = 10.0f;
         Energy = 100.0f;
-        Health = 100.0f; // Инициализация здоровья
-        Strength = 15.0f; // Инициализация силы
+        Health = 100.0f; 
+        Strength = 15.0f;
     }
 
     public void BattleCry()
     {
         if (Energy >= 20)
         {
-            Strength += 5; // Увеличение силы
+            Strength += 5; 
             Energy -= 20;
             Console.WriteLine("Герой использовал боевой клич! Сила увеличена!");
         }
@@ -30,7 +30,7 @@
         if (target != null)
         {
             float damage = this.Strength * (this.Energy / 100);
-            target.ReceiveDamage(damage); // Нанесение урона цели
+            target.ReceiveDamage(damage); 
             Console.WriteLine($"Воин атакует с увеличенным уроном благодаря боевому кличу! Нанесено {damage} урона.");
             target.DisplayHealth();
         }
@@ -49,13 +49,13 @@
 
     public void Defend()
     {
-        Armor += 5; // Увеличение защиты
+        Armor += 5; 
         Console.WriteLine("Воин защищается, увеличивая свою броню!");
     }
 
     public void EnergyRegeneration()
     {
-        Energy += 5; // Восстановление энергии
+        Energy += 5; 
         Console.WriteLine("Энергия воина восстанавливается!");
     }
 }
